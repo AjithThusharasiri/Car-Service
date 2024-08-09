@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
+// import { AppRoutingModule } from './app-routing.module';
 
 @Component({
   selector: 'app-toolbar',

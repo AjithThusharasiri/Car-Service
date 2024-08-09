@@ -1,0 +1,14 @@
+<!-- src/app/job-status/job-status.component.html -->
+<div class="p-4 max-w-lg mx-auto">
+  <h2 class="text-lg font-medium text-gray-900 mb-4">{{ 'job_status' | translate }}</h2>
+  <div *ngFor="let job of jobs" class="mb-4 p-4 border rounded-md shadow-sm">
+    <h3 class="text-md font-medium text-gray-800">{{ job.description }}</h3>
+    <p class="text-sm text-gray-600">{{ 'car' | translate }}: {{ job.car }}, {{ 'registered_number' | translate }}: {{ job.ReNum }}</p>
+    <div class="mt-2">
+      <button (click)="markAsInProgress(job)"
+        class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+        {{ 'mark_as_in_progress' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

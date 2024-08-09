@@ -1,0 +1,51 @@
+<!-- src/app/job-form/job-form.component.html -->
+<div class="p-6 max-w-lg mx-auto bg-white shadow-md rounded-lg">
+  <h2 class="text-2xl font-bold text-gray-800 mb-1 text-center">{{ 'add_job' | translate }}</h2>
+  <form (ngSubmit)="onSubmit()" #jobForm="ngForm" class="space-y-6">
+    
+    <!-- Car Selection -->
+    <div class="mb-4">
+      <label for="car" class="block text-sm font-medium text-gray-700">{{ 'car' | translate }}</label>
+      <select id="car" name="car" [(ngModel)]="job.car" required
+        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <option value="" disabled>{{ 'select' | translate }}</option>
+        <option *ngFor="let car of uniqueCars" [value]="car">{{ car }}</option>
+      </select>
+    </div>
+
+    <!-- Registered Number -->
+    <div class="mb-4">
+      <label for="carNum" class="block text-sm font-medium text-gray-700">{{ 'registered_number' | translate }}</label>
+      <select id="carNum" name="carNum" [(ngModel)]="job.carNum" required
+        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <option value="" disabled>{{ 'select' | translate }}</option>
+        <option *ngFor="let car of carNumbers" [value]="car">{{ car }}</option>
+      </select>
+    </div>
+
+    <!-- Job Description -->
+    <div class="mb-4">
+      <label for="description" class="block text-sm font-medium text-gray-700">{{ 'job_description' | translate }}</label>
+      <textarea id="description" name="description" [(ngModel)]="job.description" required
+        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm h-24 resize-none"></textarea>
+    </div>
+
+    <!-- Job Status -->
+    <div class="mb-4">
+      <label for="jobStatus" class="block text-sm font-medium text-gray-700">{{ 'job_status' | translate }}</label>
+      <select id="jobStatus" name="jobStatus" [(ngModel)]="job.jobStatus" required
+        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <option value="" disabled>{{ 'select' | translate }}</option>
+        <option *ngFor="let status of jobStatus" [value]="status">{{ status }}</option>
+      </select>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="mb-4">
+      <button type="submit"
+        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-semibold rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full transition duration-300 ease-in-out">
+        {{ 'add_job' | translate }}
+      </button>
+    </div>
+  </form>
+</div>

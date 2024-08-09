@@ -1,7 +1,24 @@
 {
-    "title": "Centre de Service Automobile",
-    "dashboard": "Tableau de Bord",
-    "add_car": "Ajouter une Voiture",
-    "add_job": "Ajouter un Travail"
+  "title": "Centre de Service Automobile",
+  "dashboard": "Tableau de Bord",
+  "add_car": "Ajouter une Voiture",
+  "add_job": "Ajouter un Travail",
+  "titlel": "Tableau de Bord du Centre de Service",
+  "total_cars": "Total des Voitures",
+  "jobs_in_progress": "Travaux en Cours",
+  "completed_jobs": "Travaux Terminés",
+  "pending_jobs": "Travaux en Attente",
+  "progress": "Progrès",
+  "change_status": "Changer le Statut",
+  "car_model": "Modèle de Voiture",
+  "car_brand": "Marque de Voiture",
+  "registered_number": "Numéro d'Immatriculation",
+  "car_year": "Année de la Voiture",
+  "car": "Voiture",
+  "job_description": "Description du travail",
+  "job_status": "Statut du travail",
+  "select": "Sélectionner",
+  "mark_as_in_progress": "Marquer comme en cours"
 }
+
   

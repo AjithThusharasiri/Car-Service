@@ -1,0 +1,85 @@
+<div class="p-6 bg-gradient-to-b from-gray-100 to-gray-300 screen">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-8 text-center">{{ 'titlel' | translate }}</h1>
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Total Cars Card -->
+      <div class="bg-gradient-to-r from-green-500 to-green-700 text-white shadow-2xl rounded-lg p-6 flex items-center transition-transform transform hover:scale-105 animate-fade-in">
+        <div class="w-12 h-12 bg-green-800 rounded-full flex items-center justify-center mr-4">
+          <!-- Icon for Total Cars -->
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold">{{ 'total_cars' | translate }}</h2>
+          <p class="text-5xl font-bold mt-2">{{ totalCars }}</p>
+        </div>
+      </div>
+  
+      <!-- Jobs In Progress Card -->
+      <div class="bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-2xl rounded-lg p-6 flex flex-col items-center transition-transform transform hover:scale-105 animate-fade-in">
+        <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mb-4">
+          <!-- Animated Icon for Jobs In Progress (Spinning Gear) -->
+          <svg class="w-6 h-6 text-white animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m-4-2h6m-6 6v-6m-4 6h6m-6 0v-6m8-3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"></path>
+          </svg>
+        </div>
+        <div class="w-full">
+          <h2 class="text-lg font-semibold text-center">{{ 'jobs_in_progress' | translate }}</h2>
+          <p class="text-5xl font-bold mt-2 text-center">{{ jobsInProgress }}</p>
+          <!-- Progress Bar -->
+          <div class="mt-4">
+            <p class="text-sm text-white mb-1">{{ 'progress' | translate }}</p>
+            <div class="relative pt-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold inline-block py-1 px-2 rounded text-teal-600 bg-teal-200 uppercase last:mr-0 mr-1">
+                  {{ progressPercent }}%
+                </span>
+              </div>
+              <div class="relative flex mb-2">
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                  <!-- Progress Bar with Inline Style -->
+                  <div class="bg-teal-600 h-2.5 rounded-full" [style.width.%]="progressPercent"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Completed Jobs Card -->
+      <div class="bg-gradient-to-r from-yellow-500 to-yellow-700 text-white shadow-2xl rounded-lg p-6 flex items-center transition-transform transform hover:scale-105 animate-fade-in">
+        <div class="w-12 h-12 bg-yellow-800 rounded-full flex items-center justify-center mr-4">
+          <!-- Icon for Completed Jobs -->
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold">{{ 'completed_jobs' | translate }}</h2>
+          <p class="text-5xl font-bold mt-2">{{ completedJobs }}</p>
+        </div>
+      </div>
+  
+      <!-- Pending Jobs Card -->
+      <div class="bg-gradient-to-r from-red-500 to-red-700 text-white shadow-2xl rounded-lg p-6 flex items-center transition-transform transform hover:scale-105 animate-fade-in">
+        <div class="w-12 h-12 bg-red-800 rounded-full flex items-center justify-center mr-4 animate-pulse">
+          <!-- New Icon for Pending Jobs (Clock Icon) -->
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"></path>
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle>
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold">{{ 'pending_jobs' | translate }}</h2>
+          <p class="text-5xl font-bold mt-2">{{ pendingJobs }}</p>
+          <!-- Add Navigation Button -->
+          <button (click)="navigateToJobStatus()"
+            class="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+            {{ 'change_status' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

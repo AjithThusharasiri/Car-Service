@@ -2,6 +2,22 @@
     "title": "Car Service Center",
     "dashboard": "Dashboard",
     "add_car": "Add Car",
-    "add_job": "Add Job"
-}
+    "add_job": "Add Job",
+    "titlel": "Service Center Dashboard",
+    "total_cars": "Total Cars",
+    "jobs_in_progress": "Jobs In Progress",
+    "completed_jobs": "Completed Jobs",
+    "pending_jobs": "Pending Jobs",
+    "progress": "Progress",
+    "change_status": "Change Status",
+    "car_model": "Car Model",
+    "car_brand": "Car Brand",
+    "registered_number": "Registered Number",
+    "car_year": "Car Year",
+    "car": "Car",
+    "job_description": "Job Description",
+    "job_status": "Job Status",
+    "select": "Select",
+    "mark_as_in_progress": "Mark as In Progress"
+  }
   
